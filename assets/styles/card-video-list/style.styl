@@ -1,0 +1,52 @@
+.ItemVideo
+	width 100%
+	padding 1rem !important
+	&__content
+		width 100%
+		box-sizing border-box
+		display flex
+		&--preview
+			width 180px
+			height 135px
+			.Preview
+				width 180px
+				position relative
+				cursor pointer
+				text-align center
+				&:hover
+					.icon-play
+						display block
+				.video-preview
+					width 180px
+					height 135px
+					line-height 0
+				.channel-preview
+					width 135px
+					height 135px
+					line-height 0
+				.icon-play
+					position absolute
+					top 50%
+					left 50%
+					font-size 2rem
+					transform translate(-50%, -50%)
+					display none
+					color rgba(0, 120, 156, 0.73)
+		&--description
+			height 135px
+			padding .2rem .5rem
+			.Title
+				font-size 1.2rem
+				margin 0
+				&:hover
+					text-decoration underline
+			.Channel
+				font-size .8rem
+				color text_opacity
+				&:hover
+					text-decoration underline
+			.PublishedAt, .Description
+				p
+					margin 0
+					font-size .8rem
+					color text_opacity

@@ -1,0 +1,48 @@
+.Header
+	&__container
+		&--title
+			margin 0
+			padding 4px 10px !important
+			.Logo
+				text-indent -99999px
+				width 55px
+				height 55px
+				background-image url('/images/logo.svg')
+				display block
+		&--list
+			li
+				.content-search
+					height 60px
+					margin 2px
+					form
+						.input-field
+							background-color #f38185
+							border-radius 3px
+							.icon-search
+								height 60px
+								left 20px
+								line-height 60px
+								.fa-search
+									line-height 60px
+									height 60px
+									color rgba(255, 255, 255, 0.63)
+							input
+								&:focus 
+									border-radius 3px
+									& + label i
+										color #444 !important
+							.fa-times
+								height 60px
+								line-height 60px
+								
+						.mobile
+							background-color white
+							box-shadow inset 0px 0px 5px #d8d8d8
+							border-radius 3px
+							.icon-search
+								.fa-search
+									color #d8d8d8
+							input
+								&:focus
+									box-shadow inset 0px 0px 5px #d8d8d8
+									border-radius 3px

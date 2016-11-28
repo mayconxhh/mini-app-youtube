@@ -1,0 +1,27 @@
+@import '../../node_modules/materialize-css/css/ghpages-materialize.css'
+@import 'nib'
+
+grisBody = #f5f7f8
+text_opacity = rgba(0, 0, 0, 0.28)
+body
+	background-color grisBody
+	font-family 'Montserrat'
+	font-size 16px
+
+.container
+	padding-top 10px
+	
+.none
+	display none
+
+.btns
+	&__container
+		padding 1rem
+		display inline-block
+
+.listVideos, .playedVideo
+	background-color white
+	
+@import './header/style.styl'
+@import './card-video-list/style.styl'
+@import './video-played/style.styl'

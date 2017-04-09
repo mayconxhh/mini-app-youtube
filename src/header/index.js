@@ -19,9 +19,6 @@ export default function header(ctx, next){
 							</form>
 						</div>
 					</li>
-					<li>
-						<a href="#">Iniciar Sesión</a>
-					</li>
 				</ul>
 				<ul class="side-nav Header__container--list" id="mobile-demo">
 					<li>
@@ -34,9 +31,6 @@ export default function header(ctx, next){
 								</div>
 							</form>
 						</div>
-					</li>
-					<li>
-						<a href="#">Iniciar Sesión</a>
 					</li>
 				</ul>
 			</div>

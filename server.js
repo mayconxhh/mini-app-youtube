@@ -20,7 +20,7 @@ app.get('/search/:valueSearch', function(req, res){
 	res.render('index', {title: 'result'})
 })
 
-app.listen(5000, function(err){
+app.listen(process.env.PORT || 5000, function(err){
 	if (err) {
 		console.log('Ocurrió un error al inicia el servidor'),
 		process.exit(1)

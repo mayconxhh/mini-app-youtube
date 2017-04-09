@@ -21,7 +21,7 @@ export default function itemVideoList(result){
 					</div>
 					<div class="ItemVideo__content--description">
 						<h3 class="Title"><a href="${item.id.videoId ? '/video/'+item.id.videoId : '/channel/'+item.id.channelId}">${item.snippet.title}</a></h3>
-						<div class="Channel"><a href="/channel/${item.snippet.ChannelId}">${item.snippet.channelTitle}</a></div>
+						<div class="Channel"><a>${item.snippet.channelTitle}</a></div>
 						<div class="PublishedAt"><p>${publishedAt}</p></div>
 						<div class="Description"><p>${item.snippet.description}</p></div>
 					</div>

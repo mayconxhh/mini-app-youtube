@@ -4,6 +4,8 @@ var stylus = require('gulp-stylus')
 var browserify = require('browserify')
 var babel = require('babelify')
 var source = require('vinyl-source-stream')
+var uglify = require('gulp-uglify')
+var pump = require('pump')
 
 gulp.task('stylus', function(){
 	return gulp.src('assets/styles/style.styl')
@@ -29,4 +31,13 @@ gulp.task('build', function(){
 		.pipe(gulp.dest('public/js'))
 })
 
-gulp.task('default', ['stylus', 'build', 'images'])
+gulp.task('compress', function(){
+	pump([
+			gulp.src('public/js/index.js'),
+			uglify(),
+			gulp.dest('public/js/')
+		]
+	)
+})
+
+gulp.task('default', ['stylus', 'build', 'images', 'compress'])

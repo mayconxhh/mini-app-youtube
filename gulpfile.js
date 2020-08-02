@@ -17,10 +17,12 @@ gulp.task('stylus', function(){
 		.pipe(gulp.dest('public/style/'))
 })
 
-gulp.task('images', function(){
+gulp.task('images', function(done){
 	gulp
 		.src('assets/images/*')
 		.pipe(gulp.dest('public/images'))
+	
+	done();
 })
 
 gulp.task('build', function(){
@@ -31,13 +33,15 @@ gulp.task('build', function(){
 		.pipe(gulp.dest('public/js'))
 })
 
-gulp.task('compress', function(){
+gulp.task('compress', function(done){
 	pump([
 			gulp.src('public/js/index.js'),
 			uglify(),
 			gulp.dest('public/js/')
 		]
 	)
+
+	done();
 })
 
-gulp.task('default', ['stylus', 'build', 'images', 'compress'])
+gulp.task('default', gulp.series(['stylus', 'build', 'images', 'compress']))

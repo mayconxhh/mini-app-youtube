@@ -16,7 +16,7 @@ function loadVideosRelational(ctx, next){
 	request
 		.get(variables.searchDefault)
 		.query({
-			part :'snippet, id',
+			part: 'snippet,id',
 			relatedToVideoId: ctx.params.id,
 			type: 'video',
 			key: variables.key,

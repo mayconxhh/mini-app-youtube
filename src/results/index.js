@@ -27,7 +27,7 @@ function loadVideos(ctx, next){
 		.get(variables.searchDefault)
 		.query({
 			part: 'snippet, id',
-			// type: 'video',
+			type: 'video',
 			q: query,
 			key: variables.key,
 			maxResults: 20
